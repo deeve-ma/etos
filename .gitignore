@@ -1,0 +1,14 @@
+#all build output
+build/
+etos.*
+
+#source insight directory
+SI/
+
+
+#private documents
+doc/
+
+
+#auto generated file
+src/include/common/build_time.h

@@ -1,0 +1,92 @@
+#
+# Copyright (c) 2013, ETOS Development Team
+# deeve.ma@gmail.com
+# 
+# This program is free software; you can redistribute it and/or 
+# modify it under the terms of the GNU General Public License 
+# (version 2) as published by the Free Software Foundation. See 
+# the LICENSE file in the top-level directory for more details.
+#
+#
+# All files in ETOS is encoded UTF-8 no bom
+
+Summary:
+========
+
+This directory contains the source code for ETOS, an exact time os 
+for Embedded boards. ETOS is base on RTOS, and can support exact 
+time schedule.
+
+The development of ETOS is for bluetooth controller link schedule.
+
+
+Staus:
+=======
+
+At this moment, ETOS is running an ARM board(FriendlyARM mini2440).
+you can add other board(not arm) if you are interested
+
+In case of problems see the AUTHORS files to find out who contributed 
+the specific part.
+
+
+Where to get help:
+==================
+
+In case you have questions about, problems with or contributions for
+ETOS you should send a message to the owner in file AUTHORS
+
+
+Versioning:
+===========
+
+ETOS uses a 2 level version number containing a version, a
+sub-version: "etos-1.2" means version "1",sub-version "2".
+
+The sub-version is used to indicate certain stages of development
+between released versions, i. e. officially released versions of
+ETOS will always have a sub-version of "0".
+
+
+Directory Hierarchy:
+====================
+All source code is in the directory src/
+
+src
+├─app
+│  └─xxx           application source
+│
+├─arch              architechture source
+│  └─arm           arm  architechture
+│      ├─include
+│      └─mini2440  board dependent files
+│
+├─common            etos common files
+├─core              etos core files
+├─driver            drivers 
+├─include           etos includes files
+└─init              initialize files 
+
+
+
+Configuration:
+=======================
+
+Only need to modify config.mk and Makefile if you porting to other 
+board.
+
+
+
+Building:
+=======================
+
+After finish the config.mk and Makefile. type make for building.
+
+Example: For board FriendlyARM mini2440:
+
+  cd etos
+  make
+
+  make clean   #clean all build files
+  make show    #show all build C code/Assambly code/header file directories
+
